@@ -11,9 +11,15 @@ export default class Repository {
       );
 
       client.on('ready', () => {
-        resolve();
+        resolve({
+          configuration: configuration,
+          error: null
+        });
       }).on('error', error => {
-        resolve(error);
+        resolve({
+          configuration: configuration,
+          error: error
+        });
       });
     });
   }

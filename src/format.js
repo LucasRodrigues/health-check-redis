@@ -5,9 +5,9 @@ export default class Format {
 
     statuses.forEach(status => {
       formatted.push({
-        name: `{$status.configuration.host}:{$status.configuration.post}`,
-        status: status.err === null,
-        message: status.err === null ? '' : status.err
+        name: `${status.configuration.host}:${status.configuration.port}`,
+        status: status.error === null,
+        message: status.error === null ? '' : status.error.message
       });
     });
 
