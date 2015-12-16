@@ -21,12 +21,3 @@ export default class HealthCheck {
     });
   }
 }
-
-HealthCheck
-  .do([{port: 1, host: 'localhost'}])
-  .then(result => {
-    console.log(result);
-  })
-  .catch(error => {
-    console.log(error);
-  });
