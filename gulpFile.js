@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const gulpBabel = require('gulp-babel');
 const del = require('del');
 const runSequence = require('run-sequence');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 
 const TASK_ES6_TO_ES5 = 'TASK_ES6_TO_ES5';
 const TASK_CLEAN_DIST = 'TASK_CLEAN_DIST';
@@ -23,6 +25,7 @@ gulp.task(TASK_ES6_TO_ES5, function () {
 
   return gulp.src(SOURCE_FOLDER + '**/*.js')
     .pipe(gulpBabel(babelConfiguration))
+    .pipe(uglify())
     .pipe(gulp.dest(DESTINATION_FOLDER));
 });
 
