@@ -43,19 +43,3 @@ export default class HealthCheck {
     });
   }
 }
-
-HealthCheck.do([
-  {
-    host: '127.0.0.1',
-    port: 6379
-  },
-  {
-    host: 'wrong host',
-    port: 6379
-  }])
-  .then(function(result) {
-    console.log(result);
-  })
-  .catch(function(error) {
-    console.log(error);
-  });
