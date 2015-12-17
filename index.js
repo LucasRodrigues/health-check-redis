@@ -1,7 +1,3 @@
 'use strict';
 
-var healthCheck = require('./lib/healthCheck');
-
-module.exports = {
-  'health-check-redis': healthCheck
-};
+module.exports = require('./lib/healthCheck').default;
