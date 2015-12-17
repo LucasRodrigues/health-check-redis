@@ -1,16 +1,31 @@
 export default class Format {
 
   static do(statuses) {
-    let formatted = [];
-
+    let data = {
+      health: true,
+      success: 0,
+      error: 0,
+      details: []
+    };
     statuses.forEach(status => {
-      formatted.push({
+      const isHealthGood = (status.error === null);
+
+      data.details.push({
         name: `${status.configuration.host}:${status.configuration.port}`,
-        status: status.error === null,
-        message: status.error === null ? '' : status.error.message
+        health: isHealthGood,
+        message: isHealthGood ? '' : status.error.message
       });
+
+      data.health &= isHealthGood;
+      if (isHealthGood) {
+        data.success++;
+      } else {
+        data.error++;
+      }
     });
 
-    return formatted;
+    data.health = Boolean(data.health);
+
+    return data;
   }
 }
