@@ -5,8 +5,9 @@
     "redis": "^2.4.2"
   },
   "scripts": {
-    "build": "npm install && npm run style && gulp BUILD",
-    "style": "npm install && eslint ./src/*.js --fix"
+    "build": "gulp BUILD",
+    "style": "npm install && eslint ./src/*.js --fix",
+    "prepublish" : "npm run build"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.1.2",
