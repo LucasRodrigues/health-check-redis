@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "gulp BUILD",
-    "style": "npm install && eslint ./src/*.js --fix",
+    "style": "eslint ./src/*.js --fix",
     "prepublish" : "npm run build"
   },
   "main": "./index.js",

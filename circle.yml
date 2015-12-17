@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: 4
+
+test:
+    override:
+        - echo no tests
+
+deployment:
+  production:
+    branch: master
+    commands:
+       - npm install && npm run style && npm run build
