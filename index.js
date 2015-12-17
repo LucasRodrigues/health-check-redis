@@ -2,4 +2,6 @@
 
 var healthCheck = require('./lib/healthCheck');
 
-module['health-check-redis'] = healthCheck;
+module.exports = {
+  'health-check-redis': healthCheck
+};
