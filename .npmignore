@@ -1,1 +1,4 @@
 src
+.eslintrc
+.gitignore
+gulpFile.js
