@@ -3,12 +3,12 @@ import HealthCheckMessageFormat from 'health-check-message-format';
 
 export default class HealthCheck {
 
-  static _resolveParameter (configurations){
-    if(!Array.isArray(configurations)){
+  static _resolveParameter(configurations) {
+    if (!Array.isArray(configurations)) {
       configurations = [configurations];
     }
 
-    return configurations
+    return configurations;
   }
 
   static do(configurations) {
@@ -22,7 +22,6 @@ export default class HealthCheck {
 
       Promise.all(promises)
         .then(statuses => {
-
           const configuration = {
             fnIsHealthGood: status => {
               return (status.error === null);
@@ -36,7 +35,7 @@ export default class HealthCheck {
             }
           };
 
-          resolve(HealthCheckMessageFormat.do(statuses,configuration));
+          resolve(HealthCheckMessageFormat.do(statuses, configuration));
         })
         .catch(error => {
           reject(error);
@@ -46,17 +45,17 @@ export default class HealthCheck {
 }
 
 HealthCheck.do([
-    {
-      host: '127.0.0.1',
-      port: 6379
-    },
-    {
-      host: 'wrong host',
-      port: 6379
-    }])
-  .then(function(result){
+  {
+    host: '127.0.0.1',
+    port: 6379
+  },
+  {
+    host: 'wrong host',
+    port: 6379
+  }])
+  .then(function(result) {
     console.log(result);
   })
-  .catch(function(error){
+  .catch(function(error) {
     console.log(error);
   });
