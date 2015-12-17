@@ -2,7 +2,7 @@
   "name": "health-check-redis",
   "description": "Get the health of redis infra",
   "repository": "https://github.com/LucasRodrigues/health-check-redis",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "MIT",
   "author": {
     "name": "Lucas Rodrigues",
