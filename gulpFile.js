@@ -9,7 +9,7 @@ const TASK_CLEAN_DIST = 'TASK_CLEAN_DIST';
 const BUILD = 'BUILD';
 
 const SOURCE_FOLDER = 'src/';
-const DESTINATION_FOLDER = 'dist/';
+const DESTINATION_FOLDER = 'lib/';
 
 gulp.task(TASK_CLEAN_DIST, function () {
 
