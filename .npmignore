@@ -3,3 +3,4 @@ src
 .gitignore
 gulpFile.js
 circle.yml
+.idea
