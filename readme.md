@@ -1,5 +1,7 @@
 # Health Check Redis
 
+Health check to system [redis](http://redis.io/)
+
 ## CI
 [![Circle CI](https://circleci.com/gh/LucasRodrigues/health-check-redis.svg?style=svg)](https://circleci.com/gh/LucasRodrigues/health-check-redis)
 
@@ -11,6 +13,7 @@ $ npm install health-check-redis
 
 ## Usage
 
+### Code
 ```
 var healthCheckRedis = require('health-check-redis');
 
