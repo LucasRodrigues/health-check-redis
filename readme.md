@@ -14,7 +14,7 @@ $ npm install health-check-redis
 ## Usage
 
 ### Code
-```
+```js
 var healthCheckRedis = require('health-check-redis');
 
 healthCheckRedis.do([
